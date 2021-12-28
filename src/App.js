@@ -1,5 +1,5 @@
 import React, { useReducer, createContext } from "react";
-import { langReducer, initialState } from "./reducer";
+import { langReducer, initialState } from "./reducers/langReducer";
 // style
 import "./css/styles.css";
 // components

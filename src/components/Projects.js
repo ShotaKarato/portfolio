@@ -1,12 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { LangContext } from "../App";
 // projects json
-import { projects as data } from "../data/projects.json";
+import { projects as dataEn } from "../data/projects_en.json";
+import { projects as dataJp } from "../data/projects_jp.json";
 // component
 import Overlay from "./Overlay";
 
 export default function Projects() {
+  // state - language
+  const {
+    state: { lang },
+  } = useContext(LangContext);
+
   // state - projects info
-  const [projects] = useState(data);
+  const [projects, setProjects] = useState(dataEn);
+  // function to switch project info between en and jp
+  const updateProjects = (language) => {
+    if (language === "en") {
+      setProjects(dataEn);
+    } else {
+      setProjects(dataJp);
+    }
+  };
 
   // state - selected project
   const [selectedProject, setSelectedProject] = useState({});
@@ -16,12 +31,16 @@ export default function Projects() {
     setSelectedProject(selectedItem);
     toggleOverlay();
   };
-  // state - overlay
+
+  // state - overlay visibility
   const [isVisible, setIsVisible] = useState(false);
   const toggleOverlay = () => {
     setIsVisible((prevVisibility) => !prevVisibility);
   };
 
+  useEffect(() => {
+    updateProjects(lang);
+  }, [lang]);
   return (
     <>
       <section className="projects">
