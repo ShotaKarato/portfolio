@@ -90,7 +90,7 @@ body {
   &__heading {
     text-align: center;
     font-size: 3.6rem;
-    margin: 0 0 96px;
+    margin: 0 0 72px;
   }
   &__timeline {
     position: relative;
@@ -321,8 +321,11 @@ body {
   }
   // about component
   .about {
-    margin: 0 0 96px;
+    margin: 0 0 72px;
     padding: 0 12px;
+    &__info-occ {
+      margin: 0 0 36px;
+    }
   }
   // author component
   .author {
@@ -334,7 +337,7 @@ body {
   }
   // career component
   .career {
-    margin: 0 0 96px;
+    margin: 0 0 72px;
     padding: 0 12px;
     &__heading {
       margin: 0 0 36px;
@@ -357,7 +360,7 @@ body {
   }
   // projects component
   .projects {
-    margin: 0 0 96px;
+    margin: 0 0 72px;
     padding: 0 12px;
     &__heading {
       margin: 0 0 60px;
