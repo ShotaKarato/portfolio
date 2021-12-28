@@ -286,6 +286,9 @@ body {
 
 // mobile devices
 @media (max-width: 767px) {
+  body {
+    font-size: 1.6rem;
+  }
   .App {
     padding: 16px 0 0;
   }
