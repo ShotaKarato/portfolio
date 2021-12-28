@@ -53,6 +53,9 @@ body {
   &__nav-sns-item:last-child {
     margin: 0;
   }
+  &__nav-sns-link {
+    display: inline-block;
+  }
   &__nav-sns-icon {
     max-width: 100%;
     height: auto;
@@ -226,7 +229,8 @@ body {
     font-size: 3.6rem;
   }
   &__prj-image-container {
-    margin: 0 0 20px;
+    width: 70%;
+    margin: 0 auto 20px;
     border-radius: 20px;
     overflow: hidden;
   }
@@ -241,15 +245,18 @@ body {
     margin: 0 0 12px;
   }
   &__prj-techs {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-gap: 12px;
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
     margin: 0 0 36px;
   }
   &__prj-tech-icon {
-    max-width: 100%;
-    height: auto;
+    margin: 0 24px 24px 0;
+    width: auto;
+    max-height: 50px;
+  }
+  &__prj-tech-icon:last-child {
+    margin: 0 0 24px;
   }
   &--visible {
     visibility: visible;
@@ -270,4 +277,136 @@ body {
 }
 .btn:hover {
   background: #c9c3b5;
+}
+
+// mobile devices
+@media (max-width: 767px) {
+  .App {
+    padding: 16px 0 0;
+  }
+  // header component
+  .header {
+    margin: 0 0 70px;
+    &__nav-list {
+      text-align: center;
+    }
+    &__nav-lang {
+      padding: 16px;
+      background: none;
+    }
+    &__nav-lang-link {
+      color: #ded7c6;
+      &--selected {
+        border-bottom: solid 2px #ded7c6;
+      }
+    }
+    &__nav-sns {
+      padding: 16px;
+    }
+    &__nav-sns-item {
+      margin: 0 12px 0 0;
+      font-size: 0;
+    }
+    &__nav-sns-icon {
+      max-width: 40px;
+    }
+  }
+  // about component
+  .about {
+    margin: 0 0 96px;
+    padding: 0 12px;
+  }
+  // author component
+  .author {
+    margin: 0 0 24px;
+    &__pic {
+      max-width: 70%;
+      height: auto;
+    }
+  }
+  // career component
+  .career {
+    margin: 0 0 96px;
+    padding: 0 12px;
+    &__heading {
+      margin: 0 0 36px;
+    }
+    &__timeline {
+      display: block;
+    }
+    &__timeline::after {
+      content: none;
+    }
+    &__item {
+      padding: 24px 12px;
+      &--empty {
+        padding: 0;
+      }
+    }
+    &__item:nth-child(odd)::after {
+      content: none;
+    }
+  }
+  // projects component
+  .projects {
+    margin: 0 0 96px;
+    padding: 0 12px;
+    &__heading {
+      margin: 0 0 60px;
+    }
+    &__container {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 36px;
+    }
+    &__project {
+      height: 200px;
+      border-radius: 12px;
+    }
+  }
+  // overlay component
+  .overlay {
+    &__bg {
+      width: 90%;
+      height: 90vh;
+      padding: 12px;
+    }
+    &__btn-close::before {
+      top: 0;
+      right: 10px;
+    }
+    &__btn-close::after {
+      top: 0;
+      right: 10px;
+    }
+    &__prj-name {
+      font-size: 3.2rem;
+    }
+    &__prj-image-container {
+      width: 100%;
+    }
+    &__prj-desc {
+      margin: 0 0 36px;
+    }
+    &__prj-tech-icon {
+      margin: 0 24px 24px 0;
+      width: auto;
+      max-height: 30px;
+    }
+    &__prj-tech-icon:last-child {
+      margin: 0 0 24px;
+    }
+    &--visible {
+      visibility: visible;
+    }
+  }
+  .btn {
+    width: 70%;
+    margin: 0 12px 12px;
+    padding: 16px 0;
+    text-align: center;
+    &__container {
+      flex-wrap: wrap;
+    }
+  }
 }

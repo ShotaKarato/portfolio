@@ -16,6 +16,7 @@ export default function Header() {
               href="https://github.com/ShotaKarato"
               target="_blank"
               rel="noopener noreferrer"
+              className="header__nav-sns-link"
             >
               <img
                 src="../image/sns_icon01.svg"
@@ -29,6 +30,7 @@ export default function Header() {
               href="https://www.linkedin.com/in/shota-karato"
               target="_blank"
               rel="noopener noreferrer"
+              className="header__nav-sns-link"
             >
               <img
                 src="../image/sns_icon02.svg"

@@ -21,8 +21,8 @@ export default function Career() {
             </p>
           </div>
         </li>
-        <li className="career__item"></li>
-        <li className="career__item"></li>
+        <li className="career__item career__item--empty"></li>
+        <li className="career__item career__item--empty"></li>
         <li className="career__item">
           <figure className="career__item-logo">
             <img
@@ -52,7 +52,7 @@ export default function Career() {
             </p>
           </div>
         </li>
-        <li className="career__item"></li>
+        <li className="career__item career__item--empty"></li>
       </ul>
     </section>
   );
