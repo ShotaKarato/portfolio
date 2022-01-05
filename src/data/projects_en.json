@@ -23,7 +23,7 @@
       "description": "A brand new website for Yokohama-Koen Judicial Scrivener Office. For this website, React and React Router are used to achieve the smooth transition among pages.",
       "image": "../image/project_yokohama-koen.png",
       "github": "https://github.com/ShotaKarato/yokohama-koen",
-      "url": "https://yokohama-koen.herokuapp.com",
+      "url": "https://yokohama-koen.netlify.app",
       "techStack": [
         { "React": "../image/tech_react.png" },
         { "React Router": "../image/tech_router.png" },

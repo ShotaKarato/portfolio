@@ -23,7 +23,7 @@
       "description": "よこはま公園司法書士事務所のホームページリニューアル。クライアントとの話し合いを重ねるなかで、クライアントが大切にする「誠実さ」が伝わるようデザインの作成を行いました。また顧客の年齢層などを考慮した上で従来はPCのみとなっていたページをスマートフォンでも閲覧できるようレスポンシブでの開発を行いました。",
       "image": "../image/project_yokohama-koen.png",
       "github": "https://github.com/ShotaKarato/yokohama-koen",
-      "url": "https://yokohama-koen.herokuapp.com",
+      "url": "https://yokohama-koen.netlify.app",
       "techStack": [
         { "React": "../image/tech_react.png" },
         { "React Router": "../image/tech_router.png" },
