@@ -44,6 +44,18 @@
         { "CSS": "../image/tech_css.png" },
         { "Sass": "../image/tech_sass.png" }
       ]
+    },
+    {
+      "id": 4,
+      "title": "楽天銀行 BIG・toto当選者の声ページリニューアル",
+      "description": "背景に紙吹雪をあしらうなど「当選」というめでたい雰囲気を全面に出せるようデザインを行いました。またページ更新時の作業工数を減らすため、Excel VBAを使用し営業用の入稿フォーマットを作成。営業が情報をExcelに記入した段階で自動的にHTMLコードが生成される仕組み作りを行いました。",
+      "image": "../image/project_lottery01.png",
+      "url": "https://www.rakuten-bank.co.jp/toto/data/enquete.html",
+      "techStack": [
+        { "JavaScript": "../image/tech_js.png" },
+        { "HTML": "../image/tech_html.png" },
+        { "CSS": "../image/tech_css.png" }
+      ]
     }
   ]
 }

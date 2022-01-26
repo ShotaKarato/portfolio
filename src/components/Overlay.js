@@ -37,7 +37,7 @@ export default function Overlay({
             <></>
           )}
         </div>
-        {url ? (
+        {url && github ? (
           <div className="btn__container">
             <a
               href={url}
@@ -56,7 +56,7 @@ export default function Overlay({
               View the code
             </a>
           </div>
-        ) : (
+        ) : !url && github ? (
           <div className="btn__container">
             <a
               href={github}
@@ -65,6 +65,17 @@ export default function Overlay({
               className="btn"
             >
               View the code
+            </a>
+          </div>
+        ) : (
+          <div className="btn__container">
+            <a
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn"
+            >
+              Visit the site
             </a>
           </div>
         )}

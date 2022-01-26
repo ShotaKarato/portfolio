@@ -44,6 +44,18 @@
         { "CSS": "../image/tech_css.png" },
         { "Sass": "../image/tech_sass.png" }
       ]
+    },
+    {
+      "id": 4,
+      "title": "Rakuten Bank - Big Winner's Voice page",
+      "description": "Confetti on the background and vivid color schemes to bring the celebratory atmosphere. Here in this page, we share the voices of those lucky lottery winners.",
+      "image": "../image/project_lottery01.png",
+      "url": "https://www.rakuten-bank.co.jp/toto/data/enquete.html",
+      "techStack": [
+        { "JavaScript": "../image/tech_js.png" },
+        { "HTML": "../image/tech_html.png" },
+        { "CSS": "../image/tech_css.png" }
+      ]
     }
   ]
 }
