@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import { GithubIcon, LinkedinIcon } from "../../ui/icons";
+import { headerStyles } from "./Header.css";
 import { HeaderLinkItem, Props as HeaderLinkItemProps } from "./HeaderLinkItem";
 
 export const Header = () => {
@@ -19,13 +20,13 @@ export const Header = () => {
     []
   );
   return (
-    <header className="header">
-      <nav className="header__nav">
-        <ul className="header__nav-lang header__nav-list">
-          <li>EN</li>
-          <li>JP</li>
+    <header className={headerStyles.header}>
+      <nav className={headerStyles.headerNav}>
+        <ul className={headerStyles.headerNavLang}>
+          <li className={headerStyles.headerNavLangLink}>EN</li>
+          <li className={headerStyles.headerNavLangLink}>JP</li>
         </ul>
-        <ul className="header__nav-sns header__nav-list">
+        <ul className={headerStyles.headerNavSns}>
           {headerLinks.map((props) => (
             <HeaderLinkItem key={props.href} {...props} />
           ))}

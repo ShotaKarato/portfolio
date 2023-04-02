@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { headerStyles } from "./Header.css";
 
 type Props = {
   readonly href: string;
@@ -9,7 +10,7 @@ export const HeaderLink = ({ href, children }: Props) => (
     href={href}
     target="_blank"
     rel="noopener noreferrer"
-    className="header__nav-sns-link"
+    className={headerStyles.headerNavSnsLink}
   >
     {children}
   </a>
