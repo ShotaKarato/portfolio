@@ -1,7 +1,23 @@
+import { useMemo } from "react";
 import { GithubIcon, LinkedinIcon } from "../../ui/icons";
-import { HeaderLink } from "./HeaderLink";
+import { HeaderLinkItem, Props as HeaderLinkItemProps } from "./HeaderLinkItem";
 
 export const Header = () => {
+  const headerLinks = useMemo<HeaderLinkItemProps[]>(
+    () => [
+      {
+        title: "Github",
+        href: "https://github.com/ShotaKarato",
+        icon: GithubIcon,
+      },
+      {
+        title: "Linkedin",
+        href: "https://www.linkedin.com/in/shota-karato",
+        icon: LinkedinIcon,
+      },
+    ],
+    []
+  );
   return (
     <header className="header">
       <nav className="header__nav">
@@ -10,16 +26,9 @@ export const Header = () => {
           <li>JP</li>
         </ul>
         <ul className="header__nav-sns header__nav-list">
-          <li className="header__nav-sns-item">
-            <HeaderLink href="https://github.com/ShotaKarato">
-              <GithubIcon />
-            </HeaderLink>
-          </li>
-          <li className="header__nav-sns-item">
-            <HeaderLink href="https://www.linkedin.com/in/shota-karato">
-              <LinkedinIcon />
-            </HeaderLink>
-          </li>
+          {headerLinks.map((props) => (
+            <HeaderLinkItem key={props.href} {...props} />
+          ))}
         </ul>
       </nav>
     </header>
