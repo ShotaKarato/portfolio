@@ -1,9 +1,14 @@
-export const LinkedinIcon = () => (
+type Props = {
+  readonly className?: string;
+};
+
+export const LinkedinIcon = ({ className }: Props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="70"
     height="70"
     viewBox="0 0 70 70"
+    className={className}
   >
     <defs>
       <linearGradient
