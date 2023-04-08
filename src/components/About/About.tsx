@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import { Heading } from "../../ui/Heading";
+import { aboutStyles } from "./About.css";
 
 export const About = () => {
   const about = useMemo(
@@ -16,20 +17,20 @@ export const About = () => {
   );
 
   return (
-    <section className="about">
-      <Heading as="h1" className="author">
+    <section className={aboutStyles.about}>
+      <Heading as="h1" className={aboutStyles.author}>
         <img
           src={about.img}
           alt={about.alt}
           width={about.width}
           height={about.height}
-          className="author__pic"
+          className={aboutStyles.authorPic}
         />
       </Heading>
-      <div className="about__info">
-        <h2 className="about__info-name">{about.name}</h2>
-        <p className="about__info-occ">{about.jobTitle}</p>
-        <p className="about__info-self">{about.bio}</p>
+      <div className={aboutStyles.info}>
+        <h2 className={aboutStyles.infoName}>{about.name}</h2>
+        <p className={aboutStyles.infoJob}>{about.jobTitle}</p>
+        <p>{about.bio}</p>
       </div>
     </section>
   );
