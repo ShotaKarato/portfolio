@@ -9,9 +9,9 @@ export type Props = {
 };
 
 export const HeaderLinkItem = ({ href, icon: Icon }: Props) => (
-  <li className={headerStyles.headerNavSnsItem}>
+  <li className={headerStyles.navSnsItem}>
     <HeaderLink href={href}>
-      <Icon className={headerStyles.headerNavSnsIcon} />
+      <Icon className={headerStyles.navSnsIcon} />
     </HeaderLink>
   </li>
 );
