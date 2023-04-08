@@ -1,4 +1,5 @@
 import { useMemo } from "react";
+import { Heading } from "../../ui/Heading";
 
 export const About = () => {
   const about = useMemo(
@@ -16,7 +17,7 @@ export const About = () => {
 
   return (
     <section className="about">
-      <h1 className="author">
+      <Heading as="h1" className="author">
         <img
           src={about.img}
           alt={about.alt}
@@ -24,7 +25,7 @@ export const About = () => {
           height={about.height}
           className="author__pic"
         />
-      </h1>
+      </Heading>
       <div className="about__info">
         <h2 className="about__info-name">{about.name}</h2>
         <p className="about__info-occ">{about.jobTitle}</p>
