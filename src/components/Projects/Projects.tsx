@@ -1,9 +1,10 @@
+import { Heading } from "../../ui/Heading";
 import { ProjectItem } from "./ProjectItem";
 import { projects } from "./mock";
 
 export const Projects = () => (
   <section className="projects">
-    <h2 className="projects__heading">Projects</h2>
+    <Heading className="projects__heading">Projects</Heading>
     <ul className="projects__container">
       {projects.map((props) => (
         <ProjectItem key={props.id} {...props} />

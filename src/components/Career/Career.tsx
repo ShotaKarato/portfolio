@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import { CareerItem, Props as CareerItemProps } from "./CareerItem";
+import { Heading } from "../../ui/Heading";
 
 export const Career = () => {
   const careerList = useMemo<CareerItemProps[]>(
@@ -28,7 +29,7 @@ export const Career = () => {
   );
   return (
     <section className="career">
-      <h2 className="career__heading">Career</h2>
+      <Heading className="career__heading">Career</Heading>
       <ul className="career__timeline">
         {careerList.map((props) => (
           <CareerItem key={props.jobTitle} {...props} />
