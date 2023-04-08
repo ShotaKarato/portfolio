@@ -20,8 +20,11 @@ export const headerStyles = {
   headerNavLangLink: style({
     cursor: "pointer",
     color: vars.color.light,
-    fontWeight: 500,
-    fontSize: vars.fontSize.base,
+    fontSize: vars.font.size.base,
+    fontWeight: vars.font.weight.medium,
+    ":first-child": {
+      margin: "0 12px 0 0",
+    },
   }),
   headerNavSns: style({
     listStyle: "none",
@@ -29,8 +32,11 @@ export const headerStyles = {
     padding: "16px",
   }),
   headerNavSnsItem: style({
-    margin: "0 12px 0 0",
+    margin: "0",
     fontSize: 0,
+    ":first-child": {
+      margin: "0 12px 0 0",
+    },
   }),
   headerNavSnsLink: style({
     display: "inline-block",
@@ -38,5 +44,8 @@ export const headerStyles = {
   headerNavSnsIcon: style({
     maxWidth: "100%",
     height: "auto",
+    ":hover": {
+      fill: vars.color.primary,
+    },
   }),
 };
