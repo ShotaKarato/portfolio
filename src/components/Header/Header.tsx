@@ -21,12 +21,12 @@ export const Header = () => {
   );
   return (
     <header className={headerStyles.header}>
-      <nav className={headerStyles.headerNav}>
-        <ul className={headerStyles.headerNavLang}>
-          <li className={headerStyles.headerNavLangLink}>EN</li>
-          <li className={headerStyles.headerNavLangLink}>JP</li>
+      <nav className={headerStyles.nav}>
+        <ul className={headerStyles.navLang}>
+          <li className={headerStyles.navLangLink}>EN</li>
+          <li className={headerStyles.navLangLink}>JP</li>
         </ul>
-        <ul className={headerStyles.headerNavSns}>
+        <ul className={headerStyles.navSns}>
           {headerLinks.map((props) => (
             <HeaderLinkItem key={props.href} {...props} />
           ))}

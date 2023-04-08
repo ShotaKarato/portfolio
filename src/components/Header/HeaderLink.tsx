@@ -10,7 +10,7 @@ export const HeaderLink = ({ href, children }: Props) => (
     href={href}
     target="_blank"
     rel="noopener noreferrer"
-    className={headerStyles.headerNavSnsLink}
+    className={headerStyles.navSnsLink}
   >
     {children}
   </a>

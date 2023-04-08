@@ -5,19 +5,19 @@ export const headerStyles = {
   header: style({
     margin: "0 0 70px",
   }),
-  headerNav: style({
+  nav: style({
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
   }),
-  headerNavLang: style({
+  navLang: style({
     listStyle: "none",
     display: "flex",
     padding: "16px 72px",
     backgroundColor: vars.color.primary,
     borderRadius: "200px",
   }),
-  headerNavLangLink: style({
+  navLangLink: style({
     cursor: "pointer",
     color: vars.color.light,
     fontSize: vars.font.size.base,
@@ -26,22 +26,22 @@ export const headerStyles = {
       margin: "0 12px 0 0",
     },
   }),
-  headerNavSns: style({
+  navSns: style({
     listStyle: "none",
     display: "flex",
     padding: "16px",
   }),
-  headerNavSnsItem: style({
+  navSnsItem: style({
     margin: "0",
     fontSize: 0,
     ":first-child": {
       margin: "0 12px 0 0",
     },
   }),
-  headerNavSnsLink: style({
+  navSnsLink: style({
     display: "inline-block",
   }),
-  headerNavSnsIcon: style({
+  navSnsIcon: style({
     maxWidth: "100%",
     height: "auto",
     ":hover": {
