@@ -1,1 +1,1 @@
-export { Projects } from "./Projects";
+export { ProjectsContainer as Projects } from "./ProjectsContailer";

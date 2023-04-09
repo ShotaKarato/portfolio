@@ -18,4 +18,9 @@ export const vars = createGlobalTheme(":root", {
     light: "#ffffff",
     dark: "#000000",
   },
+  border: {
+    radius: {
+      medium: "16px",
+    },
+  },
 });
