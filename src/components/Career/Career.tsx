@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { CareerItem, Props as CareerItemProps } from "./CareerItem";
-import { Heading } from "../../ui/Heading";
+import { Heading } from "~/src/ui/Heading";
 
 export const Career = () => {
   const careerList = useMemo<CareerItemProps[]>(

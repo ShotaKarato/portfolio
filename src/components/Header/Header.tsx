@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { GithubIcon, LinkedinIcon } from "../../ui/icons";
+import { GithubIcon, LinkedinIcon } from "~/src/ui/icons";
 import { headerStyles } from "./Header.css";
 import { HeaderLinkItem, Props as HeaderLinkItemProps } from "./HeaderLinkItem";
 

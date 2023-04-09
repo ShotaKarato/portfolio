@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { Heading } from "../../ui/Heading";
+import { Heading } from "~/src/ui/Heading";
 import { aboutStyles } from "./About.css";
 
 export const About = () => {
