@@ -1,3 +1,5 @@
+import { careerStyles } from "./Career.css";
+
 export type Props = {
   readonly period: string;
   readonly jobTitle: string;
@@ -12,14 +14,16 @@ export const CareerItem = ({
   jobTitle,
   description,
 }: Props) => (
-  <li className="career__item">
-    <figure className="career__item-logo">
-      <img src={img} alt={alt} className="career__item-logo-img" />
-    </figure>
-    <div className="career__info">
-      <span className="career__period">{period}</span>
-      <p className="career__institute">{jobTitle}</p>
-      <p className="career__description">{description}</p>
+  <li className={careerStyles.item}>
+    <div className={careerStyles.itemWrapper}>
+      <figure className={careerStyles.logo}>
+        <img src={img} alt={alt} className={careerStyles.logoImg} />
+      </figure>
+      <div>
+        <span>{period}</span>
+        <p className={careerStyles.job}>{jobTitle}</p>
+        <p className={careerStyles.desc}>{description}</p>
+      </div>
     </div>
   </li>
 );
