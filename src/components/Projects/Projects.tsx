@@ -3,6 +3,7 @@ import { Heading } from "~/src/ui/Heading";
 import { ProjectItem } from "./ProjectItem";
 import type { Props as ProjectItemProps } from "./ProjectItem";
 import { projects } from "./mock";
+import { projectsStyles } from "./Projects.css";
 
 export type Props = {
   readonly isOverlayOpen: OverlayProps["isOpen"];
@@ -15,9 +16,9 @@ export const Projects = ({
   onOverlayClose,
 }: Props) => {
   return (
-    <section className="projects">
-      <Heading className="projects__heading">Projects</Heading>
-      <ul className="projects__container">
+    <section className={projectsStyles.projects}>
+      <Heading className={projectsStyles.heading}>Projects</Heading>
+      <ul className={projectsStyles.container}>
         {projects.map((props) => (
           <ProjectItem
             key={props.id}
