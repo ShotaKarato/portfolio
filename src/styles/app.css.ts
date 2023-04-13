@@ -11,6 +11,8 @@ globalStyle("html", {
 });
 
 globalStyle("body", {
-  margin: 0,
+  maxWidth: 1366,
+  margin: "0 auto",
+  padding: "40px 0 0",
   fontSize: "20px",
 });
