@@ -3,11 +3,10 @@ import { vars } from "~/src/styles/theme.css";
 
 export const overlayStyle = {
   overlay: style({
-    visibility: "hidden",
+    display: "none",
   }),
   overlayOpen: style({
-    visibility: "visible",
-    position: "absolute",
+    position: "fixed",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",

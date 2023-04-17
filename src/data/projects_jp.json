@@ -4,57 +4,57 @@
       "id": 1,
       "title": "Eatable",
       "description": "消費期限が近くなった食品の売り買いができるショッピングアプリ「Eatable」の開発。食品ロスの削減というテーマのもと、3名のチームで開発を行いフルスタックエンジニアとしてプロジェクトに参加しました。",
-      "image": "../image/project_eatable.png",
+      "image": "../assets/image/project_eatable.png",
       "github": "https://github.com/eatable-jp/eatable",
       "url": "",
       "techStack": [
-        { "React": "../image/tech_react.png" },
-        { "React Router": "../image/tech_router.png" },
-        { "Redux Toolkit": "../image/tech_redux.png" },
-        { "Node.js": "../image/tech_node.png" },
-        { "Express.js": "../image/tech_express.png" },
-        { "Knex.js": "../image/tech_knex.png" },
-        { "Bootstrap": "../image/tech_bootstrap.png" }
+        { "React": "../assets/image/tech_react.png" },
+        { "React Router": "../assets/image/tech_router.png" },
+        { "Redux Toolkit": "../assets/image/tech_redux.png" },
+        { "Node.js": "../assets/image/tech_node.png" },
+        { "Express.js": "../assets/image/tech_express.png" },
+        { "Knex.js": "../assets/image/tech_knex.png" },
+        { "Bootstrap": "../assets/image/tech_bootstrap.png" }
       ]
     },
     {
       "id": 2,
       "title": "よこはま公園司法書士事務所 ホームページ",
       "description": "よこはま公園司法書士事務所のホームページリニューアル。クライアントとの話し合いを重ねるなかで、クライアントが大切にする「誠実さ」が伝わるようデザインの作成を行いました。また顧客の年齢層などを考慮した上で従来はPCのみとなっていたページをスマートフォンでも閲覧できるようレスポンシブでの開発を行いました。",
-      "image": "../image/project_yokohama-koen.png",
+      "image": "../assets/image/project_yokohama-koen.png",
       "github": "https://github.com/ShotaKarato/yokohama-koen",
       "url": "https://yokohama-koen.netlify.app",
       "techStack": [
-        { "React": "../image/tech_react.png" },
-        { "React Router": "../image/tech_router.png" },
-        { "Redux Toolkit": "../image/tech_redux.png" },
-        { "Sass": "../image/tech_sass.png" }
+        { "React": "../assets/image/tech_react.png" },
+        { "React Router": "../assets/image/tech_router.png" },
+        { "Redux Toolkit": "../assets/image/tech_redux.png" },
+        { "Sass": "../assets/image/tech_sass.png" }
       ]
     },
     {
       "id": 3,
       "title": "Cafe & Bar Sweed ホームページ",
       "description": "Cafe Sweedのホームページ作成。飲食店ということもあり、白を基調とした清潔感のあるデザインを作成しました。またクライアントからの「カフェ立ち上げメンバーの個性が感じられるデザインを」という要望にこたえ、メンバーそれぞれの自己紹介パートを用意するなどして、お客さまとの距離を縮めることができるような工夫も盛り込みました。",
-      "image": "../image/project_sweed.png",
+      "image": "../assets/image/project_sweed.png",
       "github": "https://github.com/ShotaKarato/sweed",
       "url": "https://www.sweed.jp",
       "techStack": [
-        { "JavaScript": "../image/tech_js.png" },
-        { "HTML": "../image/tech_html.png" },
-        { "CSS": "../image/tech_css.png" },
-        { "Sass": "../image/tech_sass.png" }
+        { "JavaScript": "../assets/image/tech_js.png" },
+        { "HTML": "../assets/image/tech_html.png" },
+        { "CSS": "../assets/image/tech_css.png" },
+        { "Sass": "../assets/image/tech_sass.png" }
       ]
     },
     {
       "id": 4,
       "title": "楽天銀行 BIG・toto当選者の声ページリニューアル",
       "description": "背景に紙吹雪をあしらうなど「当選」というめでたい雰囲気を全面に出せるようデザインを行いました。またページ更新時の作業工数を減らすため、Excel VBAを使用し営業用の入稿フォーマットを作成。営業が情報をExcelに記入した段階で自動的にHTMLコードが生成される仕組み作りを行いました。",
-      "image": "../image/project_lottery01.png",
+      "image": "../assets/image/project_lottery01.png",
       "url": "https://www.rakuten-bank.co.jp/toto/data/enquete.html",
       "techStack": [
-        { "JavaScript": "../image/tech_js.png" },
-        { "HTML": "../image/tech_html.png" },
-        { "CSS": "../image/tech_css.png" }
+        { "JavaScript": "../assets/image/tech_js.png" },
+        { "HTML": "../assets/image/tech_html.png" },
+        { "CSS": "../assets/image/tech_css.png" }
       ]
     }
   ]
