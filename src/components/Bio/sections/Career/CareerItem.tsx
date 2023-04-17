@@ -4,11 +4,11 @@ export type Props = {
   readonly period: string;
   readonly jobTitle: string;
   readonly description?: string;
-  readonly img: string;
+  readonly image: string;
   readonly alt: string;
 };
 export const CareerItem = ({
-  img,
+  image,
   alt,
   period,
   jobTitle,
@@ -17,7 +17,7 @@ export const CareerItem = ({
   <li className={careerStyles.item}>
     <div className={careerStyles.itemWrapper}>
       <figure className={careerStyles.logo}>
-        <img src={img} alt={alt} className={careerStyles.logoImg} />
+        <img src={image} alt={alt} className={careerStyles.logoImg} />
       </figure>
       <div>
         <span>{period}</span>
