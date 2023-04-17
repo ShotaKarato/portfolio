@@ -22,7 +22,7 @@ export const overlayStyle = {
     padding: "40px",
     backgroundColor: vars.color.light,
     borderRadius: vars.border.radius.medium,
-    // overflow: "scroll",
+    overflow: "scroll",
   }),
   btnContainer: style({
     display: "flex",
