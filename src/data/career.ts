@@ -1,6 +1,7 @@
 import logo1 from "~/src/assets/education_logo01.png";
 import logo2 from "~/src/assets/work_logo01.png";
 import logo3 from "~/src/assets/education_logo02.png";
+import logo4 from "~/src/assets/work_logo02.png";
 
 export const career = [
   {
@@ -20,6 +21,13 @@ export const career = [
     jobTitle: "Code Chrysalis",
     description: "Full stack engineering with agile methodology",
     image: logo3,
+    alt: "Code Chrysalis",
+  },
+  {
+    period: "2021 - Present",
+    jobTitle: "TimeTree",
+    description: "Frontend Engineer",
+    image: logo4,
     alt: "Code Chrysalis",
   },
 ];
