@@ -1,6 +1,5 @@
 import { Bio } from "./components/Bio";
-import { Footer } from "./components/Footer";
-import { Header } from "./components/Header";
+import { Outline } from "./components/Outline";
 import { Projects } from "./components/Projects";
 
 import "./styles/app.css";
@@ -8,10 +7,10 @@ import "./styles/app.css";
 const App = () => {
   return (
     <div className="App">
-      <Header />
-      <Bio />
-      <Projects />
-      <Footer />
+      <Outline>
+        <Bio />
+        <Projects />
+      </Outline>
     </div>
   );
 };
