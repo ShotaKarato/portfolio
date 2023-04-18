@@ -9,7 +9,7 @@ type Props = {
 export const Career = ({ careerList }: Props) => (
   <section className={careerStyles.career}>
     <Heading className={careerStyles.heading}>Career</Heading>
-    <ul className="career__timeline">
+    <ul>
       {careerList.map((props) => (
         <CareerItem key={props.jobTitle} {...props} />
       ))}
