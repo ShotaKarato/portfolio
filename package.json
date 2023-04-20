@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@notionhq/client": "^2.2.4",
     "@vanilla-extract/css": "^1.11.0",
     "clsx": "^1.2.1",
     "react": "^18.2.0",
