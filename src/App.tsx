@@ -4,7 +4,7 @@ import { Projects } from "./components/Projects";
 
 import "./styles/app.css";
 
-const App = () => {
+export const App = () => {
   return (
     <div className="App">
       <Outline>
@@ -14,5 +14,3 @@ const App = () => {
     </div>
   );
 };
-
-export default App;
