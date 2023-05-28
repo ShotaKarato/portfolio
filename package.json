@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "node --loader esbuild-register/loader -r esbuild-register server.ts",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
@@ -12,16 +12,22 @@
     "@notionhq/client": "^2.2.4",
     "@vanilla-extract/css": "^1.11.0",
     "clsx": "^1.2.1",
+    "express": "^4.18.2",
+    "overlayscrollbars": "2.1.1",
+    "overlayscrollbars-react": "0.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@types/express": "^4.17.17",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@typescript-eslint/eslint-plugin": "^5.57.0",
     "@typescript-eslint/parser": "^5.57.0",
     "@vanilla-extract/vite-plugin": "^3.8.0",
     "@vitejs/plugin-react-swc": "^3.0.0",
+    "esbuild": "^0.17.18",
+    "esbuild-register": "^3.4.2",
     "eslint": "^8.37.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-react": "^7.32.2",

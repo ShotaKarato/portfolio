@@ -4,13 +4,13 @@ import { Projects } from "./components/Projects";
 
 import "./styles/app.css";
 
-const App = () => (
-  <div className="App">
-    <Outline>
-      <Bio />
-      <Projects />
-    </Outline>
-  </div>
-);
-
-export default App;
+export const App = () => {
+  return (
+    <div className="App">
+      <Outline>
+        <Bio />
+        <Projects />
+      </Outline>
+    </div>
+  );
+};
