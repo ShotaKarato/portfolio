@@ -3,12 +3,14 @@ import { Outline } from "./components/Outline";
 import { Projects } from "./components/Projects";
 
 import "./styles/app.css";
+import type { BioProps } from "./components/Bio";
 
-export const App = () => {
+type Props = BioProps;
+export const App = (props: Props) => {
   return (
     <div className="App">
       <Outline>
-        <Bio />
+        <Bio {...props} />
         <Projects />
       </Outline>
     </div>

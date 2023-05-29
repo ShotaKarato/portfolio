@@ -1,11 +1,12 @@
-import { profile } from "~/src/data/profile";
-import { About } from "./sections/About";
+import { About, AboutProps } from "./sections/About";
 import { Career } from "./sections/Career";
 import { career } from "~/src/data/career";
 
-export const BioContainer = () => (
+export type Props = AboutProps;
+
+export const BioContainer = (props: Props) => (
   <>
-    <About {...profile} />
+    <About {...props} />
     <Career careerList={career} />
   </>
 );
