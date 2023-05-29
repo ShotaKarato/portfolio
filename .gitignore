@@ -2,6 +2,8 @@
 .env
 .envrc
 
+# data from notion
+bio.json
 
 # Logs
 logs
