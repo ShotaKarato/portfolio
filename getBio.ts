@@ -3,11 +3,11 @@ import { PageObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 
 export const getBio = async () => {
   const notion = new Client({
-    auth: import.meta.env.VITE_NOTION_API_KEY,
+    auth: process.env.NOTION_API_KEY,
   });
-  console.log(import.meta.env.VITE_NOTION_API_KEY);
+
   const response = await notion.databases.query({
-    database_id: import.meta.env.VITE_NOTION_BIO_DB_ID,
+    database_id: process.env.NOTION_BIO_DB_ID,
   });
 
   const id = response.results[0].id;

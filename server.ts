@@ -1,18 +1,17 @@
 import fs from "fs";
 import path from "path";
 import { writeFile } from "node:fs/promises";
-import { fileURLToPath } from "url";
+// import { fileURLToPath } from "url";
 import express from "express";
 import { createServer as createViteServer } from "vite";
 import { getBio } from "./getBio";
 
-const dirname = path.dirname(fileURLToPath(import.meta.url));
+// const dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const createServer = async () => {
   const app = express();
-  //TODO：figure out why import.meta gives an error
-  const PORT = import.meta.env.PORT ?? 5173;
-  console.log(import.meta.env);
+  const PORT = process.env.PORT ?? 5173;
+
   const vite = await createViteServer({
     server: { middlewareMode: true },
     appType: "custom",
@@ -24,7 +23,7 @@ const createServer = async () => {
     const url = req.originalUrl;
     try {
       let template = fs.readFileSync(
-        path.resolve(dirname, "index.html"),
+        path.resolve(__dirname, "index.html"),
         "utf-8"
       );
       template = await vite.transformIndexHtml(url, template);
