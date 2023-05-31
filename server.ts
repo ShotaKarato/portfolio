@@ -1,12 +1,9 @@
 import fs from "fs";
 import path from "path";
 import { writeFile } from "node:fs/promises";
-// import { fileURLToPath } from "url";
 import express from "express";
 import { createServer as createViteServer } from "vite";
 import { getBio } from "./getBio";
-
-// const dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const createServer = async () => {
   const app = express();
