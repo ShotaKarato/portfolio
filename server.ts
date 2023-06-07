@@ -3,7 +3,7 @@ import path from "path";
 import { writeFile } from "node:fs/promises";
 import express from "express";
 import { createServer as createViteServer } from "vite";
-import { getBio } from "./getBio";
+import { getContent } from "./notion/getContent";
 
 const createServer = async () => {
   const app = express();
@@ -26,12 +26,12 @@ const createServer = async () => {
       template = await vite.transformIndexHtml(url, template);
       const { SSRRender } = await vite.ssrLoadModule("./src/entry-server.tsx");
       // TODO: bundle data-fetching functions all together
-      const bio = await getBio();
+      const content = await getContent();
 
-      const appHtml = await SSRRender(bio);
+      const appHtml = await SSRRender(content);
 
       // TODO: figure out the bets way to share data to client-side
-      await writeFile("bio.json", JSON.stringify(bio));
+      await writeFile("content.json", JSON.stringify(content));
       const html = template.replace(`<!--ssr-outlet-->`, appHtml);
 
       res.status(200).set({ "Content-Type": "text/html" }).end(html);

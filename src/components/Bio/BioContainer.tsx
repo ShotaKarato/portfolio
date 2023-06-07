@@ -1,12 +1,14 @@
 import { About, AboutProps } from "./sections/About";
-import { Career } from "./sections/Career";
-import { career } from "~/src/data/career";
+import { Career, CareerProps } from "./sections/Career";
 
-export type Props = AboutProps;
+export type Props = {
+  readonly about: AboutProps;
+  readonly career: CareerProps["career"];
+};
 
-export const BioContainer = (props: Props) => (
+export const BioContainer = ({ about, career }: Props) => (
   <>
-    <About {...props} />
-    <Career careerList={career} />
+    <About {...about} />
+    <Career career={career} />
   </>
 );

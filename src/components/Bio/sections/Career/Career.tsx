@@ -2,15 +2,15 @@ import { CareerItem, Props as CareerItemProps } from "./CareerItem";
 import { Heading } from "~/src/ui/Heading";
 import { careerStyles } from "./Career.css";
 
-type Props = {
-  readonly careerList: CareerItemProps[];
+export type Props = {
+  readonly career: CareerItemProps[];
 };
 
-export const Career = ({ careerList }: Props) => (
+export const Career = ({ career }: Props) => (
   <section className={careerStyles.career}>
     <Heading className={careerStyles.heading}>Career</Heading>
     <ul>
-      {careerList.map((props) => (
+      {career.map((props) => (
         <CareerItem key={props.jobTitle} {...props} />
       ))}
     </ul>
