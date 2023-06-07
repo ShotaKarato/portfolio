@@ -3,7 +3,7 @@
 .envrc
 
 # data from notion
-bio.json
+content.json
 
 # Logs
 logs
