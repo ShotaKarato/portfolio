@@ -6,13 +6,11 @@ import "./styles/app.css";
 import type { BioProps } from "./components/Bio";
 
 type Props = BioProps;
-export const App = (props: Props) => {
-  return (
-    <div className="App">
-      <Outline>
-        <Bio {...props} />
-        <Projects />
-      </Outline>
-    </div>
-  );
-};
+export const App = (props: Props) => (
+  <div className="App">
+    <Outline>
+      <Bio {...props} />
+      <Projects />
+    </Outline>
+  </div>
+);

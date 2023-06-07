@@ -4,10 +4,10 @@ import { App } from "./App";
 const entryClient = async () => {
   try {
     const app = document.getElementById("root") as HTMLElement;
-    const response = await fetch("../bio.json");
-    const bio = await response.json();
+    const response = await fetch("../content.json");
+    const content = await response.json();
 
-    hydrateRoot(app, <App {...bio} />);
+    hydrateRoot(app, <App {...content} />);
   } catch {}
 };
 
