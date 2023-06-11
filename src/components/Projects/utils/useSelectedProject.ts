@@ -5,8 +5,9 @@ export const useSelectedProject = (projects: Project[]) => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const handleProjectSelect = useCallback(
-    (id: number) => {
-      const matchingProject = projects.find((prj) => prj.id === id) ?? null;
+    (title: string) => {
+      const matchingProject =
+        projects.find((prj) => prj.title === title) ?? null;
       setSelectedProject(matchingProject);
     },
     [projects, setSelectedProject]

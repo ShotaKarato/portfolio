@@ -30,7 +30,7 @@ export const Projects = ({
     <ul className={projectsStyles.container}>
       {projects.map((props) => (
         <ProjectItem
-          key={props.id}
+          key={props.title}
           {...props}
           onOverlayOpen={onOverlayOpen}
           onProjectSelect={onProjectSelect}
