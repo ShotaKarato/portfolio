@@ -1,5 +1,6 @@
 import { Client } from "@notionhq/client";
 import { PageObjectResponse } from "@notionhq/client/build/src/api-endpoints";
+import { NotionAboutData } from "./types";
 
 type Bio = {
   name: string;
@@ -16,12 +17,10 @@ export const getAbout = async (notion: Client): Promise<Bio> => {
   const response = await notion.databases.query({
     database_id: process.env.NOTION_BIO_DB_ID,
   });
-
   const id = response.results[0].id;
-
   const properties = (
     (await notion.pages.retrieve({ page_id: id })) as PageObjectResponse
-  ).properties;
+  ).properties as NotionAboutData;
 
   return {
     name: properties.name.rich_text[0].plain_text,
