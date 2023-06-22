@@ -16,6 +16,9 @@ const createServer = async () => {
 
   app.use(vite.middlewares);
 
+  // TODO: bundle data-fetching functions all together
+  const content = await getContent();
+
   app.use("*", async (req, res) => {
     const url = req.originalUrl;
     try {
@@ -25,8 +28,6 @@ const createServer = async () => {
       );
       template = await vite.transformIndexHtml(url, template);
       const { SSRRender } = await vite.ssrLoadModule("./src/entry-server.tsx");
-      // TODO: bundle data-fetching functions all together
-      const content = await getContent();
 
       const appHtml = await SSRRender(content);
 
