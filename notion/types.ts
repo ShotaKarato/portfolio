@@ -18,6 +18,7 @@ export type NotionProjectData = {
 };
 
 export type NotionCareerData = {
+  id: MatchType<ExtractValueType<PageObjectResponse["properties"]>, "number">;
   job_title: MatchType<
     ExtractValueType<PageObjectResponse["properties"]>,
     "rich_text"
