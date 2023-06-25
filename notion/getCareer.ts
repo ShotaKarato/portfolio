@@ -4,6 +4,7 @@ import { formatPeriod } from "./utils/formatPeriod";
 import { NotionCareerData } from "./types";
 
 type Career = {
+  readonly id: number;
   readonly period: string;
   readonly jobTitle: string;
   readonly description?: string;
@@ -24,11 +25,14 @@ export const getCareer = async (notion: Client): Promise<Career> => {
     ),
   ])) as NotionCareerData[];
 
-  return pages.map((page) => ({
-    jobTitle: page.job_title.rich_text[0].plain_text,
-    description: page.description.rich_text[0]?.plain_text ?? "",
-    period: formatPeriod(page.period.date!),
-    image: page.logo.files[0].file.url,
-    alt: page.alt.rich_text[0].plain_text,
-  }));
+  return pages
+    .map((page) => ({
+      id: page.id.number!,
+      jobTitle: page.job_title.rich_text[0].plain_text,
+      description: page.description.rich_text[0]?.plain_text ?? "",
+      period: formatPeriod(page.period.date!),
+      image: page.image.files[0].file.url,
+      alt: page.alt.rich_text[0].plain_text,
+    }))
+    .sort((first, second) => first.id - second.id);
 };

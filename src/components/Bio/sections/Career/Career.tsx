@@ -10,8 +10,8 @@ export const Career = ({ career }: Props) => (
   <section className={careerStyles.career}>
     <Heading className={careerStyles.heading}>Career</Heading>
     <ul>
-      {career.map((props) => (
-        <CareerItem key={props.jobTitle} {...props} />
+      {career.map((careerItem) => (
+        <CareerItem key={careerItem.jobTitle} {...careerItem} />
       ))}
     </ul>
   </section>
