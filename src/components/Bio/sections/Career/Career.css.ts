@@ -4,10 +4,21 @@ import { vars } from "~/src/styles/theme.css";
 export const careerStyles = {
   career: style({
     margin: "0 0 112px",
+    "@media": {
+      "screen and (max-width: 767px)": {
+        margin: "0 0 72px",
+        padding: "0 12px",
+      },
+    },
   }),
   heading: style({
     textAlign: "center",
     margin: "0 0 72px",
+    "@media": {
+      "screen and (max-width: 767px)": {
+        margin: "0 0 36px",
+      },
+    },
   }),
   item: style({
     position: "relative",
@@ -26,6 +37,11 @@ export const careerStyles = {
         width: 4,
         height: "100%",
         background: vars.color.primary,
+        "@media": {
+          "screen and (max-width: 767px)": {
+            content: "none",
+          },
+        },
       },
       "&:nth-child(even):before": {
         position: "absolute",
@@ -36,6 +52,11 @@ export const careerStyles = {
         width: 4,
         height: "100%",
         background: vars.color.primary,
+        "@media": {
+          "screen and (max-width: 767px)": {
+            content: "none",
+          },
+        },
       },
       "&:last-child:before": {
         content: "none",
@@ -50,6 +71,11 @@ export const careerStyles = {
         transform: "translateX(-45%) translateY(-50%)",
         background: vars.color.primary,
         borderRadius: "100%",
+        "@media": {
+          "screen and (max-width: 767px)": {
+            content: "none",
+          },
+        },
       },
       "&:nth-child(even):after": {
         position: "absolute",
@@ -61,6 +87,16 @@ export const careerStyles = {
         transform: "translateX(-45%) translateY(-50%)",
         background: vars.color.primary,
         borderRadius: "100%",
+        "@media": {
+          "screen and (max-width: 767px)": {
+            content: "none",
+          },
+        },
+      },
+    },
+    "@media": {
+      "screen and (max-width: 767px)": {
+        display: "block",
       },
     },
   }),
@@ -69,12 +105,21 @@ export const careerStyles = {
     display: "flex",
     justifyContent: "center",
     padding: "24px 36px",
+    "@media": {
+      "screen and (max-width: 767px)": {
+        width: "100%",
+        justifyContent: "flex-start",
+        padding: "24px 12px",
+      },
+    },
+  }),
+  logo: style({
+    display: "flex",
+    alignItems: "center",
+    margin: "0 24px 0 0",
   }),
   logoImg: style({
     width: 60,
-  }),
-  logo: style({
-    margin: "0 24px 0 0",
   }),
   job: style({
     fontSize: vars.font.size.medium,
