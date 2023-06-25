@@ -1,5 +1,6 @@
 import { Heading } from "~/src/ui/Heading";
 import { aboutStyles } from "./About.css";
+import { Paragraph } from "~/src/ui/Paragraph";
 
 export type Props = {
   name: string;
@@ -29,9 +30,9 @@ export const About = ({
       />
     </Heading>
     <div className={aboutStyles.info}>
-      <h2 className={aboutStyles.infoName}>{name}</h2>
-      <p className={aboutStyles.infoJob}>{jobTitle}</p>
-      <p>{description}</p>
+      <Heading className={aboutStyles.infoName}>{name}</Heading>
+      <Paragraph className={aboutStyles.infoJob}>{jobTitle}</Paragraph>
+      <Paragraph>{description}</Paragraph>
     </div>
   </section>
 );
