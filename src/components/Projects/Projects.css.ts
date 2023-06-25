@@ -3,17 +3,38 @@ import { vars } from "~/src/styles/theme.css";
 
 export const projectsStyles = {
   projects: style({
-    margin: "0 0 112px",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    margin: "0 12px 112px",
+    "@media": {
+      "screen and (max-width: 767px)": {
+        margin: "0 0 72px",
+        padding: "0 12px",
+      },
+    },
   }),
   heading: style({
     textAlign: "center",
     margin: "0 0 96px",
+    "@media": {
+      "screen and (max-width: 767px)": {
+        margin: "0 0 60px",
+      },
+    },
   }),
   container: style({
     display: "grid",
     gridTemplateColumns: "repeat(2, 1fr)",
     gridGap: 72,
     margin: "0 auto",
+    "@media": {
+      "screen and (max-width: 767px)": {
+        display: "grid",
+        gridTemplateColumns: "1fr",
+        gridGap: "36px",
+      },
+    },
   }),
   project: style({
     maxWidth: 600,
@@ -22,6 +43,12 @@ export const projectsStyles = {
     overflow: "hidden",
     boxShadow: "-4px 8px 20px -6px rgba(0, 0, 0, 0.14)",
     cursor: "pointer",
+    "@media": {
+      "screen and (max-width: 767px)": {
+        height: "200px",
+        borderRadius: "12px",
+      },
+    },
   }),
   projectBg: style({
     height: "100%",
