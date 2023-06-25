@@ -17,15 +17,28 @@ export const careerStyles = {
       "&:nth-child(even)": {
         justifyContent: "flex-end",
       },
-      "&:nth-child(even):before": {
+      "&:nth-child(odd):before": {
         position: "absolute",
         content: "",
-        top: "50%",
+        top: "100%",
         left: "50%",
         transform: "translateY(-50%)",
         width: 4,
-        height: 250,
+        height: "100%",
         background: vars.color.primary,
+      },
+      "&:nth-child(even):before": {
+        position: "absolute",
+        content: "",
+        top: "100%",
+        left: "50%",
+        transform: "translateY(-50%)",
+        width: 4,
+        height: "100%",
+        background: vars.color.primary,
+      },
+      "&:last-child:before": {
+        content: "none",
       },
       "&:nth-child(odd):after": {
         position: "absolute",
