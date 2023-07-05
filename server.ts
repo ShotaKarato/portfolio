@@ -1,6 +1,5 @@
 import fs from "fs";
 import path from "path";
-import { writeFile } from "node:fs/promises";
 import express from "express";
 import { createServer as createViteServer } from "vite";
 import { getContent } from "./notion/getContent";
@@ -30,10 +29,10 @@ const createServer = async () => {
       const { SSRRender } = await vite.ssrLoadModule("./src/entry-server.tsx");
 
       const appHtml = await SSRRender(content);
-
-      // TODO: figure out the bets way to share data to client-side
-      await writeFile("content.json", JSON.stringify(content));
-      const html = template.replace(`<!--ssr-outlet-->`, appHtml);
+      const contentJson = JSON.stringify(content);
+      const html = template
+        .replace(`<!--ssr-outlet-->`, appHtml)
+        .replace(`<!--json-outlet-->`, contentJson);
 
       res.status(200).set({ "Content-Type": "text/html" }).end(html);
     } catch (e) {
