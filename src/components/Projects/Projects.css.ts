@@ -1,5 +1,12 @@
-import { style } from "@vanilla-extract/css";
+import { createVar, style } from "@vanilla-extract/css";
 import { vars } from "~/src/styles/theme.css";
+
+export const bgImageStyle = {
+  bgImage: createVar(),
+  bgSize: createVar(),
+  bgImagePosition: createVar(),
+  bgImageRepeat: createVar(),
+};
 
 export const projectsStyles = {
   projects: style({
@@ -43,6 +50,10 @@ export const projectsStyles = {
     overflow: "hidden",
     boxShadow: "-4px 8px 20px -6px rgba(0, 0, 0, 0.14)",
     cursor: "pointer",
+    backgroundImage: bgImageStyle.bgImage,
+    backgroundSize: bgImageStyle.bgSize,
+    backgroundPosition: bgImageStyle.bgImagePosition,
+    backgroundRepeat: bgImageStyle.bgImageRepeat,
     "@media": {
       "screen and (max-width: 767px)": {
         height: "200px",
