@@ -13,6 +13,10 @@ export type NotionProjectData = {
     "rich_text"
   >;
   image: MatchType<ExtractValueType<PageObjectResponse["properties"]>, "files">;
+  image_small: MatchType<
+    ExtractValueType<PageObjectResponse["properties"]>,
+    "files"
+  >;
   github: MatchType<ExtractValueType<PageObjectResponse["properties"]>, "url">;
   url: MatchType<ExtractValueType<PageObjectResponse["properties"]>, "url">;
 };
