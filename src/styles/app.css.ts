@@ -1,4 +1,5 @@
 import { globalStyle } from "@vanilla-extract/css";
+import { vars } from "./theme.css";
 
 globalStyle("*", {
   boxSizing: "border-box",
@@ -18,6 +19,7 @@ globalStyle("body", {
   "@media": {
     "screen and (max-width: 767px)": {
       padding: "16px 10px 0",
+      fontSize: vars.font.size.base,
     },
   },
 });

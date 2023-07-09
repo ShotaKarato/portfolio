@@ -61,7 +61,7 @@ export const projectsStyles = {
       },
     },
   }),
-  projectBg: style({
+  projectCardBg: style({
     height: "100%",
     padding: 20,
     background: "rgba(0, 0, 0, 0.2)",
@@ -69,19 +69,31 @@ export const projectsStyles = {
       background: "rgba(0, 0, 0, 0.25)",
     },
   }),
-  projectName: style({
+  projectCardTitle: style({
     color: vars.color.light,
   }),
-  // &__prj-name {
-  //   margin: 0 0 36px;
-  //   text-align: center;
-  //   font-size: 3.6rem;
-  // }
+  projectName: style({
+    margin: "0 0 36px",
+    textAlign: "center",
+    fontSize: vars.font.size.large,
+    "@media": {
+      "screen and (max-width: 767px)": {
+        fontSize: vars.font.size.medium,
+      },
+    },
+  }),
   projectImageContainer: style({
     width: "70%",
     margin: "0 auto 20px",
     borderRadius: 20,
     overflow: "hidden",
+    "@media": {
+      "screen and (max-width: 767px)": {
+        display: "flex",
+        justifyContent: "center",
+        width: "100%",
+      },
+    },
   }),
   projectImage: style({
     maxWidth: "100%",

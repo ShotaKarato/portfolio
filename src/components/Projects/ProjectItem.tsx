@@ -33,8 +33,8 @@ export const ProjectItem = ({
       })}
       onClick={handleClick}
     >
-      <div className={projectsStyles.projectBg}>
-        <h3 className={projectsStyles.projectName}>{title}</h3>
+      <div className={projectsStyles.projectCardBg}>
+        <h3 className={projectsStyles.projectCardTitle}>{title}</h3>
       </div>
     </li>
   );
