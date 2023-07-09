@@ -13,6 +13,11 @@ globalStyle("html", {
 globalStyle("body", {
   maxWidth: 1366,
   margin: "0 auto",
-  padding: "40px 0 0",
+  padding: "40px 10px 0",
   fontSize: "20px",
+  "@media": {
+    "screen and (max-width: 767px)": {
+      padding: "16px 10px 0",
+    },
+  },
 });

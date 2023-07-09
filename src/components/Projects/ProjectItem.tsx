@@ -1,10 +1,11 @@
 import { useCallback } from "react";
 import { bgImageStyle, projectsStyles } from "./Projects.css";
 import { assignInlineVars } from "@vanilla-extract/dynamic";
+import { Project } from "./types";
 
 export type Props = {
-  readonly title: string;
-  readonly image: string;
+  readonly title: Project["title"];
+  readonly image: Project["image"];
   readonly onOverlayOpen: () => void;
   readonly onProjectSelect: (title: string) => void;
 };
@@ -25,7 +26,7 @@ export const ProjectItem = ({
       key={title}
       className={projectsStyles.project}
       style={assignInlineVars({
-        [bgImageStyle.bgImage]: `url(${image})`,
+        [bgImageStyle.bgImage]: `url(${image.url})`,
         [bgImageStyle.bgSize]: "cover",
         [bgImageStyle.bgImagePosition]: "center center",
         [bgImageStyle.bgImageRepeat]: "no-repeat",

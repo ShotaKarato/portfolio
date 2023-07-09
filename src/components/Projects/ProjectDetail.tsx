@@ -1,3 +1,4 @@
+import { Image } from "~/src/ui/Image";
 import { projectsStyles } from "./Projects.css";
 import { Project } from "./types";
 
@@ -7,6 +8,8 @@ export const ProjectDetail = ({
   title,
   description,
   image,
+  imageSmall,
+  alt,
   github,
   url,
   techStack,
@@ -14,7 +17,12 @@ export const ProjectDetail = ({
   <>
     <h3 className="overlay__prj-name">{title}</h3>
     <figure className={projectsStyles.projectImageContainer}>
-      <img src={image} alt={title} className={projectsStyles.projectImage} />
+      <Image
+        image={image}
+        imageSmall={imageSmall}
+        alt={alt}
+        className={projectsStyles.projectImage}
+      />
     </figure>
     <p className={projectsStyles.projectDescription}>{description}</p>
     <h4 className={projectsStyles.projectTechsHeading}>Tech Stack</h4>

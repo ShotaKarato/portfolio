@@ -29,7 +29,6 @@ export const headerStyles = {
   navSns: style({
     listStyle: "none",
     display: "flex",
-    padding: "16px",
   }),
   navSnsItem: style({
     margin: "0",
