@@ -17,17 +17,27 @@ export const overlayStyle = {
     background: "rgba(0, 0, 0, 0.2)",
   }),
   container: style({
-    width: "80%",
-    height: "80vh",
+    width: "90%",
+    height: "90vh",
     padding: "40px",
     backgroundColor: vars.color.light,
     borderRadius: vars.border.radius.medium,
     overflow: "scroll",
+    "@media": {
+      "screen and (max-width: 767px)": {
+        padding: "16px",
+      },
+    },
   }),
   btnContainer: style({
     display: "flex",
     justifyContent: "flex-end",
     margin: "0 0 24px",
+    "@media": {
+      "screen and (max-width: 767px)": {
+        margin: "0 0 12px",
+      },
+    },
   }),
   closeBtn: style({
     border: "none",

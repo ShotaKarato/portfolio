@@ -15,7 +15,7 @@ export const ProjectDetail = ({
   techStack,
 }: Props) => (
   <>
-    <h3 className="overlay__prj-name">{title}</h3>
+    <h3 className={projectsStyles.projectName}>{title}</h3>
     <figure className={projectsStyles.projectImageContainer}>
       <Image
         image={image}
